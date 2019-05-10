@@ -9,7 +9,9 @@ class EmailParser
     @email = emails
   end
 
-  def parser
+  def parse
     array = @email.split(/[, ]/).uniq
+    array.reject {|object| object.empty?}
+
   end
 end
